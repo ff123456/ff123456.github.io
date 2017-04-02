@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+        }
+        /* 定义动画 
+                        from{}
+            to{}
+
+
+        */
+        
+        @keyframes drive {
+            0% {}
+            /* 移动到 右边 */
+            30% {
+                transform: translateX(1000px);
+            }
+            /*  在右边 原地 旋转 180deg */
+            40% {
+                transform: translateX(1000px) rotateY(180deg);
+            }
+            /*  保持旋转 x变为0 */
+            80% {
+                transform: translateX(0px) rotateY(180deg);
+            }
+            /* 如果 没有设置 会还原为 默认的状态 */
+            100% {}
+        }
+        
+        .drive {
+            animation: drive 10s linear infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="drive" src="img/car.jpg" alt="">
+</body>
+
+</html>
